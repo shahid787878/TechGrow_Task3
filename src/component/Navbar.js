@@ -1,7 +1,7 @@
 import { Link,useLocation } from 'react-router-dom'
 import React from 'react'
 // import Shop from './Shop';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 const Navbar = () => {
     let location = useLocation();
     console.log(location.pathname)

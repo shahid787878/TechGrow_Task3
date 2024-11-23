@@ -956,7 +956,7 @@ const PhotoGallary = () => {
           <span className="carousel-control-next-icon p-2 bg-dark"></span>
           </button>
         </div>
-</div>
+{/* </div>
         <div className="section-2 container-fluid h-100  bg-success  "  >
         <div className="owl-carousel owl-theme w-100 row  mx-auto  " id="owl-one">
 <div className="row-fluid bg-danger w-100">
@@ -989,6 +989,7 @@ const PhotoGallary = () => {
 <img alt="nn" src="https://images.pexels.com/photos/450054/pexels-photo-450054.jpeg?auto=compress&cs=tinysrgb&w=600" style={{height:'100vh'}}  srcSet=""/>
 </div>
 </div>
+</div></div></div> */}
 </div></div></div>
     <div className="container-fluid   mx-auto">
       <div className="row  text-center  " >

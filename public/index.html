@@ -56,6 +56,380 @@
     -->
     <title>React App</title>
   </head>
+  <style>
+    
+.btnshop {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.btnshop::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    width: 51%;
+}
+.btnshop::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    width: 51%;
+}
+.btnshop:hover {
+    color: #fff !important;
+}
+.btnshop:focus, .btnshop:hover, .btnshop.active {
+    box-shadow: none;
+    outline: medium none;
+    border-color: inherit;
+}
+.btnshop:hover:before{
+    width: 0;
+}
+.btnshop:hover:after {
+    width: 0;
+}
+/*button_css_end*/
+/*view_all_carousel_css_start*/
+.carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+.carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+.carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+.carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+.carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+.carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+/*.shadow{
+    background-color: #68718814;
+}*/
+
+
+/*view_all_carousel_css_end*/
+/*view_all_button_css_start*/
+
+.btn-line-fill {
+    border: 1px solid #333;
+    overflow: hidden;
+    position: relative;
+    color: #333 !important;
+    transition: all 0.8s ease 0s;
+    z-index: 1;
+}
+.btn-line-fill:hover {
+    color: #fff !important;
+}
+.btn-line-fill:before{
+    position: absolute;
+    top: 50%;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    z-index: -1;
+}
+.btn-line-fill:hover:before {
+    -webkit-animation: criss-cross-left 0.7s both;
+    animation: criss-cross-left 0.7s both;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+.btn-line-fill:before {
+    left: -20px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+@keyframes criss-cross-left{
+   0% {
+    left: -20px;
+}
+50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+}
+100% {
+    left: 50%;
+    width: 450px;
+    height: 450px;
+}
+}
+
+.btn-line-fill:after {
+    position: absolute;
+    top: 50%;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    z-index: -1;
+}
+.btn-line-fill:hover:after {
+    -webkit-animation: criss-cross-right 0.7s both;
+    animation: criss-cross-right 0.7s both;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+.btn-line-fill:after {
+    right: -20px;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+}
+@keyframes criss-cross-right{
+   0% {
+    right: -20px;
+}
+50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+}
+100% {
+    right: 50%;
+    width: 450px;
+    height: 450px;
+}
+}
+/*view_all_button_css_end*/
+
+
+.bi-star-fill, .bi-star, .bi-star-half{
+    color: #ffc107;
+    font-size: 15px;
+    color: #ffc107;
+}
+/*.bi-star-fill:hover{
+    color: black;
+}*/
+del,.rating_num {
+    font-size: 14px;
+}
+.card:hover {
+    
+    transition: 1s ease-in-out;
+}
+.card:hover img {
+    -webkit-filter: brightness(.8);
+   filter: brightness(.8);
+    transition: 0.3s ease-in-out;
+    opacity: 0.8;
+}
+.card:hover .card_content {
+    background: white;
+    color: var(--dark-color);
+    transform: translateY(0px);
+}
+</style>
+  </style>
+  <script> 
+  $(document).ready(function(){
+    $('#owl-one').owlCarousel({
+          
+          loop:true,
+          margin:0,
+          nav:true,
+          stagePadding:1,
+          autoplay:true,
+          rtlf:true,
+          autoplayTimeout:1000,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:3
+              },
+              1000:{
+                  items:5
+              }
+          }
+      })
+      $('#owl-two').owlCarousel({
+          
+          loop:true,
+          margin:0,
+          nav:true,
+          stagePadding:10,
+          autoplay:true,
+          rtlf:true,
+          autoplayTimeout:1000,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:3
+              },
+              1000:{
+                  items:5
+              }
+          }
+      })
+      $('#owl-three').owlCarousel({
+       
+          loop:true,
+          margin:0,
+          nav:true,
+          stagePadding:10,
+          autoplay:true,
+          rtlf:true,
+          autoplayTimeout:1500,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:3
+              },
+              1000:{
+                  items:3
+              }
+          }
+      })
+      $('#center').slick({
+  centerMode: true,
+  centerPadding: '500px',
+  slidesToShow: 3, 
+  
+  autoplay:true,
+          rtlf:false,
+          autoplayTimeout:3000,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '150px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '10px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});      
+         }
+)
+    
+
+</script>  
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>

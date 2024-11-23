@@ -1,0 +1,2498 @@
+<script>
+  window.onscroll = function () {
+    scrollFunction()
+  };
+  function scrollFunction() {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 100) {
+      document.getElementById("vb").style.backgroundColor = "transparent";
+      document.getElementById("vb").style.margin = "";
+      document.getElementById("vb").style.transition = "1s";
+    }
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 371) {
+      document.getElementById("vb").style.backgroundColor = "ghostwhite";
+      document.getElementById("vb").style.margin = "";
+    }
+  };
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .nav-item::after{content:'';display:block;width:0px;height:2px;background:#fec400;transition: 0.2s;}
+.nav-item:hover::after{width:100%;}
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{color:#fec400;}
+.nav-link{padding:10px 5px;transition:0.2s;}
+.dropdown-item.active, .dropdown-item:active{color:#212529;}
+.dropdown-item:focus, .dropdown-item:hover{background:#fec400;}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+  
+.container{
+  transform-style: preserve-3d;
+}
+
+.container .box{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* margin: 20px; */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.container-fluid .box .body{
+  /* position: absolute; */
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.9s ease;
+}
+
+
+
+.container-fluid .box .body .imgContainer{
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+
+
+.container-fluid .box .body .content{
+ 
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+.container-fluid .box:hover .body{
+  transform: rotateY(180deg);
+}
+
+.container-fluid .box .body .content div{
+  transform-style: preserve-3d;
+  padding: 20px;
+  /* max-height: 100%; */
+  background: linear-gradient(45deg, #FE0061,#FFEB3B);
+  transform: translateZ(100px);
+}
+
+.container-fluid .box .body .content div h3{
+  letter-spacing: 1px;
+}
+.oipn img {
+    height: 30px;
+  }
+
+  .right-top li {
+    list-style-type: none;
+  }
+
+  .modal-body {
+    background-image: url(img/sdlogo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* @import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700'); */
+  .rainbow {
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .rainbow-1:hover {
+    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    animation: slidebg 5s linear infinite;
+
+    animation: slidebg 2s linear infinite;
+  }
+  @keyframes slidebg {
+    to {
+      background-position: 20vw;
+    }
+  }
+  svg {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 1.5;
+    cursor: pointer;
+  }
+  svg path {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+    transition: 2.5s;
+  }
+  svg path:hover {
+    stroke: greenyellow;
+    stroke-width: 1px;
+    fill: greenyellow;
+  }
+  svg+svg {
+    margin-left: 1.5rem;
+  }
+  #top,
+  #bottom {
+    stroke-dasharray: 30, 75.39;
+    transition: all 0.6s cubic-bezier(0.6, 0.33, 0.67, 1.29);
+  }
+  svg.active #top,
+  svg.active #bottom {
+    stroke-dasharray: 75.39;
+    stroke-dashoffset: -60;
+  }
+  svg:nth-child(2) {
+    transform: rotate(0deg);
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  svg:nth-child(2) path {
+    transition: all 0.4s ease-in-out 0.6s;
+  }
+  svg:nth-child(2).active {
+    transform: rotate(180deg);
+  }
+  .rocket #top {
+    stroke-dasharray: 30, 88;
+  }
+ #carouselExampleFade .carousel-inner .carousel-item{
+    z-index: -1;
+  }
+  
+.imgContainer {
+	margin: 2em auto;
+	padding: 0;
+	/* max-width: 600px; */
+	list-style: none;
+	/* height: 15em; */
+}
+
+.imgContainer img {
+	float: left;
+	/* width: 100px;
+	height: 100px;
+	margin: 0 5px; */
+	background: #ccc;
+	text-align: center;
+	/* line-height: 100px; */
+	opacity: 0;
+	animation: fadeIn 1s ease-in both;
+}
+
+.imgContainer img:nth-child(2) {
+	animation-delay: 1s;
+}
+.imgContainer img:nth-child(3) {
+	animation-delay: 2s;
+}
+.imgContainer img:nth-child() {
+	animation-delay: 6s;
+}
+
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+.a359{
+  background-image: linear-gradient(  rgba(222, 238, 3,0.1) 10%,transparent 70%,rgba(222, 238, 3,0.2) 15%);
+ transition: 3s;
+  /* z-index: -1; */
+}
+.a359:hover{
+  background-image: linear-gradient( rgba(219, 40, 180, 0.1) 10%,transparent 70%,rgba(195, 102, 35, 0.1) 15%);
+  transition: 3s;
+
+}
+
+.sidenav-1{
+      width: 150px;
+      max-height: 100%;
+      top: 0;
+      left: 0;
+      transform: translateY(50%);
+      position:fixed;
+  
+  background:transparent;
+  z-index: 1;
+    }
+    .sidenav-1 a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+ .sidenav {
+  transform: translateY(50%);
+  max-height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 150px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+}
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav-1 a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  /* padding: 0px 100px; */
+color: aqua;
+background: #000;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.nav-item::after{content:'';display:block;width:0px;height:2px;background:#fec400;transition: 0.2s;}
+.nav-item:hover::after{width:100%;}
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{color:#fec400;}
+.nav-link{padding:10px 5px;transition:0.2s;}
+.dropdown-item.active, .dropdown-item:active{color:#212529;}
+.dropdown-item:focus, .dropdown-item:hover{background:#fec400;}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+  
+.container{
+  transform-style: preserve-3d;
+}
+
+.container .box{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* margin: 20px; */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.container-fluid .box .body{
+  /* position: absolute; */
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.9s ease;
+}
+
+
+
+.container-fluid .box .body .imgContainer{
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+
+.container-fluid .box .body .content{
+  /* position: absolute; */
+ 
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+.container-fluid .box:hover .body{
+  transform: rotateY(180deg);
+}
+
+.container-fluid .box .body .content div{
+  transform-style: preserve-3d;
+  padding: 20px;
+  /* max-height: 100%; */
+  background: linear-gradient(45deg, #FE0061,#FFEB3B);
+  transform: translateZ(100px);
+}
+
+.container-fluid .box .body .content div h3{
+  letter-spacing: 1px;
+}
+.oipn img {
+    height: 30px;
+  }
+
+  .right-top li {
+    list-style-type: none;
+  }
+
+  .modal-body {
+    background-image: url(img/sdlogo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* @import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700'); */
+  .rainbow {
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .rainbow-1:hover {
+    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    animation: slidebg 5s linear infinite;
+
+    animation: slidebg 2s linear infinite;
+  }
+  @keyframes slidebg {
+    to {
+      background-position: 20vw;
+    }
+  }
+  svg {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 1.5;
+    cursor: pointer;
+  }
+  svg path {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+    transition: 2.5s;
+  }
+  svg path:hover {
+    stroke: greenyellow;
+    stroke-width: 1px;
+    fill: greenyellow;
+  }
+  svg+svg {
+    margin-left: 1.5rem;
+  }
+  #top,
+  #bottom {
+    stroke-dasharray: 30, 75.39;
+    transition: all 0.6s cubic-bezier(0.6, 0.33, 0.67, 1.29);
+  }
+  svg.active #top,
+  svg.active #bottom {
+    stroke-dasharray: 75.39;
+    stroke-dashoffset: -60;
+  }
+  svg:nth-child(2) {
+    transform: rotate(0deg);
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  svg:nth-child(2) path {
+    transition: all 0.4s ease-in-out 0.6s;
+  }
+  svg:nth-child(2).active {
+    transform: rotate(180deg);
+  }
+  .rocket #top {
+    stroke-dasharray: 30, 88;
+  }
+ #carouselExampleFade .carousel-inner .carousel-item{
+    z-index: -1;
+  }
+  .card{
+  
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+}
+.card:hover {
+    
+    transition: 1s ease-in-out;
+}
+.card:hover img {
+    -webkit-filter: brightness(.8);
+   filter: brightness(.8);
+    transition: 0.3s ease-in-out;
+    opacity: 0.8;
+}
+.card:hover .card-body{
+  transform: translateY(-100px);
+
+
+}
+.card:hover .mb-2{
+  transform: translateY(-120px);
+ 
+
+}
+.dr1{
+  display:none;
+}
+.card:hover .card-body{
+  display: block;
+} 
+.card:hover .card_nt {
+    background: white;
+overflow: hidden;
+
+    color: var(--dark-color);
+    transform: translateY(0px);
+}
+.card_content h3 {
+  text-align: center;
+}
+
+.upshop {
+  background-color: transparent;
+  border: 1px solid #FF324D;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.upshop::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #FF324D;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+  width: 51%;
+}
+.upshop::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color:#FF324D;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+  width: 51%;
+}
+.upshop:hover {
+  color: #FF324D !important;
+}
+.upshop:focus, .upshop:hover, .upshop.active {
+  box-shadow: none;
+  outline: medium none;
+  border-color: inherit;
+}
+.upshop:hover:before{
+  width: 0;
+}
+.upshop:hover:after {
+  width: 0;
+}
+
+.h3_starting{
+  background-color:#FF324D;
+}
+.h3_starting::before {
+  content: '';
+  position: absolute;
+  right: 62%;
+  top: 1px;
+  bottom: 0;
+  display: block;
+  width: 0;
+  height: 0px;
+  border: 20px solid #FF324D;
+  border-bottom-color: #FF324D;
+  border-left-color: transparent;
+}
+.h3_starting::after {
+  content: '';
+  position: absolute;
+  left: 62%;
+  top: 1px;
+  display: block;
+  width: 0;
+  height: 0px;
+  border: 20px solid #FF324D;
+  border-bottom-color: #FF324D;
+  border-right-color: transparent;
+}
+.bi-star-fill, .bi-star, .bi-star-half{
+  color: #ffc107;
+  font-size: 15px;
+  color: #ffc107;
+}
+.bi-star-fill:hover{
+  color: black;
+}
+del,.rating_num {
+  font-size: 14px;
+}
+.btn-line-fill {
+  border: 1px solid #333;
+  overflow: hidden;
+  position: relative;
+  color: #333 !important;
+  transition: all 0.8s ease 0s;
+  z-index: 1;
+}
+.btn-line-fill:hover {
+  color: #fff !important;
+}
+.btn-line-fill:before{
+  position: absolute;
+  top: 50%;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  z-index: -1;
+}
+.btn-line-fill:hover:before {
+  -webkit-animation: criss-cross-left 0.7s both;
+  animation: criss-cross-left 0.7s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+.btn-line-fill:before {
+  left: -20px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@keyframes criss-cross-left{
+ 0% {
+  left: -20px;
+}
+50% {
+  left: 50%;
+  width: 20px;
+  height: 20px;
+}
+100% {
+  left: 50%;
+  width: 450px;
+  height: 450px;
+}
+}
+
+
+.btn-line-fill:after {
+  position: absolute;
+  top: 50%;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  z-index: -1;
+}
+.btn-line-fill:hover:after {
+  -webkit-animation: criss-cross-right 0.7s both;
+  animation: criss-cross-right 0.7s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+.btn-line-fill:after {
+  right: -20px;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+}
+@keyframes criss-cross-right{
+ 0% {
+  right: -20px;
+}
+50% {
+  right: 50%;
+  width: 20px;
+  height: 20px;
+}
+100% {
+  right: 50%;
+  width: 450px;
+  height: 450px;
+}
+
+}
+.imgContainer {
+	margin: 2em auto;
+	padding: 0;
+	/* max-width: 600px; */
+	list-style: none;
+	/* height: 15em; */
+}
+
+.imgContainer img {
+	float: left;
+	/* width: 100px;
+	height: 100px;
+	margin: 0 5px; */
+	background: #ccc;
+	text-align: center;
+	/* line-height: 100px; */
+	opacity: 0;
+	animation: fadeIn 1s ease-in both;
+}
+
+.imgContainer img:nth-child(2) {
+	animation-delay: 1s;
+}
+.imgContainer img:nth-child(3) {
+	animation-delay: 2s;
+}
+.imgContainer img:nth-child() {
+	animation-delay: 6s;
+}
+
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+.a359{
+  background-image: linear-gradient(  rgba(222, 238, 3,0.1) 10%,transparent 70%,rgba(222, 238, 3,0.2) 15%);
+ transition: 3s;
+  /* z-index: -1; */
+}
+.a359:hover{
+  background-image: linear-gradient( rgba(219, 40, 180, 0.1) 10%,transparent 70%,rgba(195, 102, 35, 0.1) 15%);
+  transition: 3s;
+
+}
+@media screen and (max-width: 480px) {
+  .hm {font-size: 10px;margin-left: -150px; }
+}
+.hm{
+              background-image: url(data:image/jpeg;base64,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);
+background-clip: text;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+/*color: transparent;*/
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+            }
+            .main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+	.lt{
+			display: flex;
+	justify-content: center;
+	align-items: center;
+		height: 300px;
+		width: 300px;
+		border: 20px solid pink;
+		border-radius: 300px;
+		border-left: 80px solid blue;
+		border-right: 80px solid cyan;
+		border-top: 80px solid pink;
+		border-bottom: 80px solid green;
+-webkit-animation:spin 10s linear infinite;
+animation: spin 1s linear infinite;
+
+	}
+	@keyframes spin{
+		0%{
+			transform: rotate(360deg);
+		}
+		100%{
+			transform: rotate(0deg);
+		}
+	}
+	.sd{
+display: flex;
+	justify-content: center;
+	align-items: center; 
+		height: 200px;
+		width: 200px;
+		border-radius: 200px;
+		border-left: 40px solid orange;
+		border-right: 40px solid yellow;
+		border-top: 40px solid grey;
+		border-bottom: 40px solid green;
+-webkit-animation:spin 0s linear infinite;
+animation: spin .9s linear infinite;
+
+	}
+	@keyframes spin{
+		0%{
+			transform: rotate(0deg);
+		}
+		100%{
+			transform: rotate(360deg);
+		}
+	}
+		.dd{
+			display: flex;
+	justify-content: center;
+	align-items: center;
+		height: 100px;
+		width: 100px;
+		border: 10px solid red;
+		border-radius: 100px;
+		border-left: 20px solid orange;
+		border-right: 20px solid yellow;
+		border-top: 20px solid grey;
+		border-bottom: 20px solid green;
+-webkit-animation:spin 0s linear infinite;
+animation: spin .1s linear infinite;
+
+	}
+	@keyframes spin{
+		0%{
+			transform: rotate(0deg);
+		}
+		100%{
+			transform: rotate(360deg);
+		}
+	}
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+    integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat:wght@200;300;400;500;600&family=Open+Sans:ital,wght@0,300;0,400;1,400&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="test.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"
+    integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+  <link rel="stylesheet" href="test.js">
+  <script src="
+    https://cdn.jsdelivr.net/npm/rss-parser@3.13.0/dist/rss-parser.min.js
+    "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+    integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"
+    integrity="sha512-9CWGXFSJ+/X0LWzSRCZFsOPhSfm6jbnL+Mpqo0o8Ke2SYr8rCTqb4/wGm+9n13HtDE1NQpAEOrMecDZw4FXQGg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+
+
+</style>
+
+<body>
+
+  <header id="os" class=" float-start position-relative   align-items-center   w-100   " style="z-index: 1;">
+    <nav id="erg" class="navbar navbar-expand-lg  w-100 position-fixed mt-3 mb-3 z-index-1 ">
+      <div id="vb" class="container-fluid position-fixed  ">
+        <a class="navbar-brand animate__animated animate__bounce" href="">
+          <h1>
+            <a href="" class="typewrite text-dark text-decoration-none hm d-sm-display-6 d-md-display-5 d-lg-display-5 d-xl-display-5 "  data-period="2" data-type='[ "Kshipra River Ujjain" ]'>
+              <span class="wrap"></span>
+            </a>
+          </h1>
+        
+          <script>
+            //made by vipul mirajkar thevipulm.appspot.com
+        var TxtType = function(el, toRotate, period) {
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 1000) || 2000;
+                this.txt = '';
+                this.tick();
+                this.isDeleting = false;
+            };
+        
+            TxtType.prototype.tick = function() {
+                var i = this.loopNum % this.toRotate.length;
+                var fullTxt = this.toRotate[i];
+        
+                if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
+        
+                this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+        
+                var that = this;
+                var delta = 200 - Math.random() * 100;
+        
+                if (this.isDeleting) { delta /= 2; }
+        
+                if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+                }
+        
+                setTimeout(function() {
+                that.tick();
+                }, delta);
+            };
+        
+            window.onload = function() {
+                var elements = document.getElementsByClassName('typewrite');
+                for (var i=0; i<elements.length; i++) {
+                    var toRotate = elements[i].getAttribute('data-type');
+                    var period = elements[i].getAttribute('data-period');
+                    if (toRotate) {
+                      new TxtType(elements[i], JSON.parse(toRotate), period);
+                    }
+                }
+                // INJECT CSS
+                var css = document.createElement("style");
+                css.type = "text/css";
+                css.innerHTML = ".typewrite > .wrap { border-right: 8em solid #red}";
+                document.body.appendChild(css);
+            };
+          </script>
+        </a>
+        <div class="collapse navbar-collapse animate__animated animate__bounce" id="shahid">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item  ">
+              <a class="nav-link active" aria-current="page" href="">Home</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="" data-bs-toggle="modal" data-bs-target="#jyDiv">About Us</a>
+            </li>
+        <li class="nav-item">  
+          <details>
+            <summary class="mt-2">Contact</summary>
+            <span class="">9752784376</span><br>
+            </details>
+        
+          
+        </li>
+        <li class="nav-item"><a  data-bs-toggle="modal" data-bs-target="#kyDiv" class="nav-link" >
+        More
+        </a></li>
+          </ul>
+        </div>
+        <div class="  right-top animate__animated animate__bounce">
+          <ul class="d-flex align-items-center">
+            <li>
+              <button data-bs-toggle="modal" data-bs-target="#loginModal"
+                class="rainbow rainbow-1 btn login-btn-links d-none d-md-block">
+                <div class="icons">
+                  <svg width="25" height="25" viewBox="0 0 36 22" xmlns="http://www.w3.org/2000/svg"
+                    onclick="this.classList.toggle('active')">
+                    <g transform="matrix(1,0,0,1,-419.5,-274.131)">
+                      <g id="arrow_rocket">
+                        <path id="top"
+                          d="M420,274.631L450,274.631C450,274.631 459.044,284.599 450,284.599C440.956,284.599 420,284.646 420,284.646L430.014,274.631" />
+                        <g transform="matrix(1,-1.22465e-16,-1.22465e-16,-1,0,569.277)">
+                          <path id="bottom"
+                            d="M420,274.631L450,274.631C450,274.631 459.044,284.599 450,284.599C440.956,284.599 420,284.646 420,284.646L430.014,274.631" />
+                        </g>
+                        <g transform="matrix(1,0,0,1,0,-0.0234189)">
+                          <path id="middle" d="M420,284.646L450,284.646" />
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+              </button>
+            </li>
+            <li>
+            
+              <button type="button" class="btn bar-btn-links" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRightmobile">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-grid-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
+                  </svg>
+                </span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="offcanvas offcanvas-end" id="offcanvasRightmobile">
+      <div class="offcanvas-header ">
+        <button type="button" class="close-menu mt-4" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="head-contact d-none d-lg-block">
+
+
+          <!-- <iframe 3 line embelded map on app src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="200" frameborder="0" style="border:0"></iframe> -->
+          Map
+          <iframe class="w-100 mx-auto mb-5" height="400"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14684.133823426788!2d75.869735!3d23.059235!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39630dbb9bfd7d59%3A0xf05db12509c6eb59!2sSewarkhedi%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1719978412020!5m2!1sen!2sin"
+            style="border:0;" allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          News
+          <!-----------------------Related News Start---------------------------------->
+          <div id="relatedStories_news" class="commonNews_Widget">
+            <span class="h2">Related</span>
+            <div class="news-cards">
+              <figure>
+                <a
+                  href="https://www.bhaskar.com/local/mp/ujjain/news/alampur-udana-incident-police-conducted-post-mortem-of-both-the-bodies-131962937.html">
+                  <div class="imgThumb">
+                    <!-- <img width="280" height="157"
+                      data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAJFBMVEVHcEz3nRD8nxL7nhP8nhL6nRT7nBT5nBX6nBb5nBb5nBb5nBg5wgKHAAAAC3RSTlMADBsvRmeHpsHZ7lsu8oMAAACySURBVHgBVc7hEQQRDAXgUIHoQFRw+m/htoToQHTgHmbt3psxfF5+hFZYUlgPT0gUJC0uZcl5GXSocikiYVGQT1zjoIuxJMdRUgxgTMKEwEwe/xha5oSWOWw64eCZMbrDoEN54jy9gDbQGZ5rOPe0/8PImx0co98cIHBo5nFuWh/eXrTuybRutcnRbHO0ajRbrZ3m1UD8tq9aa1prB6mp6leRurdS5LpUz+6SSwr05H7/AFnDToXr4wcyAAAAAElFTkSuQmCC"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWcAAACMCAMAAACXkphKAAAAwFBMVEX///8bGRj2nAAAAAD8/PyxsbDAwMD2mgAQDQv1kwAWExL2mADs7OwYFhX1lQDHx8ejo6I1NDPa2tpdXFz19fUKBgMgHh7959D++fPl5eX+9ev6zZr1jgD29vb97+DY2Nisq6v71a34um/84cT3rk/83Lo6OTgsKyp4eHhlZGT6yJD3q0b5woP85c36z6BxcHCYmJeEg4NJSEf3pzj4sln2oSL4tmT5vXYoJiZNTEz3rEj1iQD3pzr3oyx1dXSamppk9BTQAAASkElEQVR4nO1dCVviPBeNtNCmoWUTAUGQVUBkU1RmXP7/v/qSLtB7k0KrvOMwX8/zOM6UkKanN+cuSTuEnBnauz9S/Fd44D/9a0Ku+/4/UpwcNf4zrxPS5Rz3h5zrrn8wxUnR5D9Dzu2c/2Uqfg/9gylOBiERguPhgHP8TMgT5/e+73Od6sfJ0OV+r21wSluEzDKEGDOitzi/TBzv/vTo/g1wt0fqG8KJ7ZNaa0ieqV6nPTJs1fgP/yxT9xul+BbaIrbYcKM1HkmNE/yL1mp0wOluk3du2t13/vEwjfO+jzdurFOqkwGttR2HvLNulz0Sx2nX6BOpUy7V1/c/PcZzh9CDPhfmGn0mM/Z07Tg1g81eWKbmOPUBm3Gz5qEd65NUOr4F4QAJeyLEobUucx4Ye2HG26PBf7G+w4Y16hAyYCR1h99Epi1EY0qe2abGjIGRMTIZQ/xk+D+c2oZxOxfS0c789EjPFrr4o99qcw2m/SFjPZfkPfg/e4wNh5TWeSDysPtKioRoCtp4eEGeDKfPIMkB1axPuUk/8ACEs5xmh1+CLkSjTelDzTE2MskeNobT7lMe5JFaKh1fRPs3t9Aeo/13Q2HMvkkbj9ykX7iK/06D6C9AZHmk2bqv6zTD3iJp5kS/sYxD6m+t+e5rKeKjNhV//uKx3FwpzUCkuzzGEwpNpmmhNCn6lEfEdWbQl0Mke3ihBuNOs0vT2l1y9FubIU8EDxtzYNI8KhlmWv2fHvNZYkid99qUHac5k2HN2rtDhz894rND33VqXWo4gzg0ZzIDx6Bu5j1PbToJHlrPXGubsVTDVw5+ax6eW6kjTIb6hhrTejOWarjKMb+eGnSTxnWJ8ewwOojMAzE2vyijzz895vPCtVcPiq8ae+Xg0NNKdFw0N715rU5qCWjmRNdIvdbtbdJqUnzovRalmd5LEnt+6WUobb2ktdFEaL85RnT1SEm0YTj3aS0pMYaZ2MGGB5ZJY+ckqE2b3WH/od3uJbPnXrtd6w+7zbSYFBN6d9OijuMkopkTzb9CW5t0QTYB2i8OS0gzJ5o5L6lAJ0X3UHVfSfNbasoJUW/3u/Np7GTQw2Y67/bbaeYdE/Xu428uz4wlDDd4wMEYF+jfj92U63io92fv9As8O/R91k9JTgT9YZZUn2fpslVi1ObPyeON53kaOsdHvT99ozR5WCcCO0rfpqlyxEK9323OevcZ5wv6nLl/njW7KdGJ0E1Ic5oJfgH1qZHcno1pasmJ8PDM9TlZWdQtjDL6nHrCuKg3WYuyzPuvQbJ63dOv9wyjLdZMjToW2v76YO09Gc+Pninr9bSWlADXA5pUN+ggXYJNihnPu5MVoJnDGJ399LjPC13a2vTm7STrsOylPe9tWjQN7mLjejqvCYkeJIrsxONvRK/Np6l4JEKbx8MJiBaNU4aTY0gZvZ/H53l+z7+QLngnxez3pnlNHmMLtPFIrpub36kfTIT6YCaC4PfYysEbPvIvtGeDNElJAC/jeGTOphnLoo1mhrG30FdTxMc9Nbok3qK38Ua6Bk1fD/EVvDk8FH6JpRy8ERfmrpMSnRy/xP7aPmWb4VGi2TDjhRrNwU+P+uzQF4lK3aE98nSkQMo/fiI96ggHqKcrsV/Bu9MnD9R4fzr03PHTxhBPD9LHnx7t2eLljdvohm3qB548NjKsvmHv3PYf09j5axiKR7y73E677ktO1Ogx1iXvbvVomj6n+RXobrleBGsbdl9z1DQ7tTe2EbGJaJvW97+M2UC87MsgU+Z47y0wArkQijF32JQw8cqv++lPj/SscS0CNfFKwA17eWBsxgxvLcvY8IiZObUeV+Z2q8cbpUsp34GQ3frvIbmmjDQZu3bYnBlPA8OYM+easTk35joZ/q77TVN8A1OR6rWGpOc0rx1az7DplG2uqXM9dV7IkH9AZqlonABimeSZ68cjJW26IY9Of8gT7A1t6/SNC7MrGj89xj+Fm0anUMjlCoVO4/LEXT+IxLDFlYHOuEeckid63abPZMq934xyVRHvzK3/+2ngZeFzMdIA7ibLXP6kJ3kQL2vlKvzQapMXTi594d6vxpW7/i+9EilfLuSKKxVznVWJ81q1LgAskx+0xrnTjUD4uH7Pe6XrjAfUj1yQGbdh8Y6OM3aAl+OF+JUrLj8qO1uVWjVWgs6LCNhVTVt0TjQgEU80eRYy5C6xyX9e5pxv7gDbc3K+r1LTBX83/C8LbqqmZXu0XaFWnYqm2VEk+6hqd6czapFUd7lGdLvez0PXP3imWGraxYW25H8ranvKzApolJ9o5hGSPQnRSqeyaeEOXWrb/jvOu+SMX9xa1FxybSEThRDP1XG41a1WjcOyx/Q44lRfgJAIN7SokfPVCyL4C7RAy3IBDvHsGniAiYbZNEPhBlYT7e7Uod6ZI3ux58gq8QNhnov7dmtEs61plWJBBM56vpxbXWBJMbXGj13T34fcHbBErUDIaB9NaLe7hpjmqlaEMtnZohaWllp0gFcUognHN96rsNARDytEojaRO8si8TBHf/JS/mrksObyyR4KOHY8dzDNK1VvUqvPP3gpfzeWMoGhgGOnGyPZ7FXI4t5u/tR1/PXAUYSmhwKOwA9KhhqlvOh+hP3o/ztGME7gcz3Esy8PSJ2rH1GdIYO2UoXe4RJ6L7saMkrT93Z3yEwLUZ3dpMIRiTLkRsvtAw7b8prElQ0ewMCQQztV/v0vAAYd1jo0+TW3LnqJeY7uq4JUKNLy/x8Bgw5tiQNoxDOXlkgsUp4PoBIm0i7t5765dT+Pb88TxHOqGwClMD0gEXeLFCZS3Wjvhj3maVeyzh6XUdV7LyPBVhqpBgkU5v8TOBPZUToS1aJbFD8vorpB8XP1hFVocpNdbUujxSp71rEiTpl9mr1ERUfmrpUjeikh2TidPDcWmqaZllXlv5TFlb8TOgZZKRZLzJzXEBu0beXlHngzdLO46ChaxQQc7ji8lqO9XkZcxd8GoklQrkntPkXHbfn7qmZmRLMYANLUqaIbeOcevvx6938IREXq3wSg7LiwHegZzp/+PpwVz0UFnZqe8nwKhHnGazkCbqKa8vxtAN0oybtG3M9Tnr8NwHNeE6u6wMta6/PgOdJDwnZV9eHIb6PlrYQnCQPEG7eadpUDZRZ3R5qIN1BgrzyyB/KnMQcYeblRF77rmGQj8AlOUV35h6FEaquor6/D5zMXEa2K6pMAwNS+4sYXmGf9NpsFBW+tyL95B44sw52uIIPmJOo6UAEzqtkOn6+w40rOOx6dwEzCcbRfroObwQ7VN0D5OXJ1MA97OzAaCMyzAMhA3bIVPIIy1wU8dVSZC7aKyn7DuIX7YI4mwjo8hb/z85/hGQYv5vr4mWLyDCtEtrqk2cguF+srhTTZF16Df4dnNMSIK/kCz3BZSrGPMycqNFrVVFZGfa4O8nzTKHfKeV2+CMRzvsAVK1fWFTyXxUeFYxvyTsIzODnciNLIFT8/bwt5zHOD6J0s/yh7WA3gxaM11E9O8YGd47abeB3gubPy54FmVla5LbjGMM+Xn3eBbx7BkpW52O7c9uog1SfhGRbT9/O7PN6N4nWJHPV699HkwEIcUA5oZLmj2/O9SkIUz4XRvgPbROFN+FTL0GcWKlmZuwu3+YUc2Px4Gp5BMBFcSr4SMjcLB577Hk1tFK0iYKZsQx98qFi2UVTZiOZ5HP2kykWY58ardqAdvCYt+qGL0/BcUJhdNt6DCgJm9K5BsBsrtIiKd9JeeGlXZXWb63h6q+c7t59RPOujw+zteO4cvB3S1yKv47/g2Z2ueJfhkQFGrRLBM+8mpmqDfqmoVEglz6Ujj1EEPDeOPjqk/t5/xHNR4lm9lnRggBELOth7Ks7njl3bRjlUFc/ybcLD8fjS8ZOGx69DMYx8sRK+Xd/geQv84BKHmbEGqNS2gpJnqXfrgDIqeMZrVNKDmwHPC3wiE2mhhUNKeZn8hseeoJV9lb0VQHl3DJ7hNjcRVKI9VNxBHR2gMg1Zg68FuvGBZr1lh5LQwmoyCS8sK3iGYmAuluMSSnI8ntFKOg8ptsCiLqx15RW5IfD8ERHKI5lcsHIGRhHBc6e0Xe7UEi4V888bsG/uobaQeWsrD9BTjs5ovY9EoT7Yvh/EOzvtUGB96+YtIpwNVkNlnpHqVMWJ80tw7zye4ZhNO4frmWIaNZBL1sAyrB7Xj0bwXNH4xXiT62YNzUvrdMbgSLXkGhFow6lsVNAAXbbcjlcqmncZEFrBDmvidmckWnBU5vnKUn1/IuWDUJ6ski4d8/LuD3jsNsxz7HBAzbNnsNoo1+gspfgNLUCrNrp52oNKlvtr06rFcjmLn5MKrgBtMQptHS+F3bpPtMRzWRLdtWS87ljg/fQKZMr6BqAHFnhixytqnsfe6SxFARrDT3+V9Q1wbe4A/fvvSph0/26UY99XCCdIZvJKnuW1UW+GSjxDC/fmmJJndIqQcDTimrOaZ6yQBzvwHYOK54Y0wAN3LVATtOSzzxILaFTVipLnhRQ7u0OUeb4C8UA5mmcSWcBV70kzPcAxqHj+TMJzI5pnGE/wgwfC7l1AgmxknxqMpOisrOJZauY9SyvzDL9IDvAMLT9ULFXzXPFwBbpS8RxdJrPlGxUoFTjo8wzchJKD/ac59dh3FQt5jrozQOLZkgcvZpLEM1g2sF8P8QwcTTgnVOlG7DylEW11dlXcqPCIXVuJ5BkWoHJRWz8vwgkj5jmIAuVRuc9MSTwrpEn0cZjn4DIS8oy3uQvEzwcLdxF8+D4eDHCkOmPAMyzk58qVKKJDeTl++CfgWRFC4ZdFuDxfKXguH9ONIM9T8wziWBDY4YTtIlnerdpnIwI6jz5lNq/k+RbphuTLgo5Dmoey7p3bicvzVr50pT3DDf6+d1DzDKuK4RqAYuonqm+Mwc22LMusatrYj2jAEn0Q5ih5BssTrmUCC3fVnkd4Y1BBRzwHtwCnL3wuvap4Hsu1Og1bnsszCEx89pQ8XyqvzYX+TZ7D3sQere/u1h/ZHRlwGhUO8AwcqucxQ+Zml7jYT1Y59LIbaJC7dTLZ57gZjMSz4n6slTzfKvRPyTN66AsMVp75yXgODQKsc0iWFfCg4hnMKr+bEC/BkjUCSjR29lOS4rqCime5luiW52WeEafFKJ7hDTbhayfw8wRJeQ5PCLzEjQaTi+I5D+P7onRDYK1A3T1XB9/e8ZsizBK6b/5QJd/kVlYU691w4qi4FzyXUeENlWil6ZOw/hye3zaa2TAM9s4s81w2YTM/fw5fsPoFOhOosOZVkPWA/mzvyzLPWGC8WEbBM7px2ihbRr19NgpoodI28WjX6LYm5DmcE5ojSDTysto2W0Y16lwZD7AazLdwx5ap2t6EZ76lLcSM0oFXtfxZpqg/w3TWupBubzC3UNqENn6KdtJDG/LWmRukHLuMIh7PgDjThNKBci4zzgAD0wV5iKWUDinv58EOt19A89rvT7VuFY6WTH8eqXiWSntHodqOhYRl57hjrluBh09tPqncC9ML4j2d0kt1jiKUiNhQ766KnkPohF4AqshnbGQ1wQUr12GLwX23tTuFXO18RbLV5F2NEKED/VBwpTF5RkYlJtWV2LhTjSDiIMzSfliKji/uxJQIDR3XpmUEdUL1/o28v4XH2iXJ6n1fR1dsAeyI/WzlcI13FzXE5FkVgnO98Id4FXv3hoAZ3tMlh0Jex2Dl7fiNVBeH9/rWyd7mQrRE7K9LQnQ1ctvg5X6hp3oXHIy73q16mGiX/13ildeDA7TBdIvoGE7JouqxwSp4JvKjrH9/vyhcL0IhejjPsrTtgY1fWe6SLNuqaiX1suqh9W7FQy77pzMuR8irQ9JCfFhaBcWFOBQSkF7UdfmBNsVxgVnchO1P256AZ1Je7/avmRqMQKqrV29PgthwNjrywo7Can01GocaxeY5H1Fi9LHcr2lZGloTLyz8D+2q+/wGxI1ilVixRSPvbuSsml51RXtdirHub68nNCfY/9z58HcCVAqolJElubF44fRV5TPeTuMw4u+TKUt8gLjmchVsKLzLSnlKw9sVezVWXXlDWhyMeE9DPrdcbNfr7WL/5ndfuW3/xpxmn3mjkCsIFfrqPnMVEuxHaqCnlyWrK2eLn0WXAkXefdPIR70POY9L3Hj/yQF8ClEy9yVugEiet6BZ1IbEBuztWzxfga7y0pHwFjJ9AdyRnHXuoEX2oQZ6wCjJ613yE23vbvI5gMhuCqBZlArcwN6+9V5d2NWNNAboVcsTsQXAsm33fxOIfi1n7kAfSrghrtgeJry0hmuCR757m6j5eUDPLSfr0SiskSdCYTkZXV2UKqvbvX39D+YAerb0P6hIAAAAAElFTkSuQmCC"
+                      alt="problem" title="Hii" class="lazy" loading="lazy"> -->
+
+                  </div>
+                  <div class="card_title">
+                    <span class="h3">
+                      आलमपुर उड़ाना की घटना, पुलिस ने दोनों शवों का पोस्टमार्टम कराया</span>
+                  </div>
+                </a>
+              </figure>
+            </div>
+          </div>
+          <div class="news-cards">
+            <figure>
+              <a
+                href="https://www.naidunia.com/madhya-pradesh/ujjain-mujhfuze-zub-fuu-rjhtu-b-rvuh-wx-fzu-y-rfumtl-ctuu-6526028s">
+                <div class="imgThumb">
+                  <!-- <img width="280" height="157" data-src="" src="" alt="problem" title="Hii" class="lazy" loading="lazy">      -->
+                  <!-- <img width="280" height="157"
+                    data-src="https://www.naidu.com/madhya-pradesh/ujjain-mujhfuze-zub-fuu-rjhtu-b-rvuh-wx-fzu-y-rfumtl-ctuu-6526028"
+                    src="data:image/png;base64,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"
+                    alt="problem" title="Hii" class="lazy" loading="lazy"> -->
+                </div>
+                <div class="card_title">
+                  <span class="h3">
+                    सेवरखेड़ी डैम का प्रस्ताव शासन को भेजने से पहले ही किसानों का विरोध</span>
+                </div>
+              </a>
+            </figure>
+          </div>
+        </div>
+        Video
+        <!-- <iframe class="mx-auto w-100 mb-5 " height="441" src="https://www.youtube.com/embed/FuEm3n0BErw"
+          title="Alam pur Udana post panth piplai dist ujjain" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+        <p class="mt-4">Kshipra River Upcoming Dam Severkhedhi Project Around 300Cr
+        </p>
+        <div class="quick-link my-4">
+          <ul>
+            <li> <i class="fab fa-whatsapp"></i> <span>Nil</span> </li>
+            <li> <i class="fas fa-envelope"></i> <span>ujjain.com</span> </li>
+          </ul>
+        </div>
+        <ul class="side-media d-flex list-unstyled">
+          <li> <a href="https://www.facebook.com/profile.php?id=61553035197650&amp;is_tour_completed=true"
+              target="_blank"> <i class="fab fa-facebook-f"></i> </a> </li>
+          <li> <a href="https://twitter.com/ispl_t10" target="_blank"> <i class="fab fa-twitter"></i> </a> </li>
+          <li> <a href="https://www.linkedin.com/in/ispl-indian-street-premier-league-737115299/" target="_blank"> <i
+                class="fab fa-linkedin"></i> </a> </li>
+          <li> <a href="https://www.youtube.com/channel/UC73dEMSiwTVJ8zZqeQfP9Lw" target="_blank"> <i
+                class="fab fa-youtube"></i> </a> </li>
+          <li> <a href="https://instagram.com/ispl_t10?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"> <i
+                class="fab fa-instagram"></i> </a> </li>
+        </ul>
+      </div>
+      <div class="head-contact d-block d-lg-none">
+        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.quora.com%2FWhere-is-the-Shipra-River-located&psig=AOvVaw0zxwtDeMFF568a0RyXVN8P&ust=1719909755478000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKDi96m5hYcDFQAAAAAdAAAAABAE"
+          class="logo-side">
+          <!-- <img src="https://qph.cf2.quoracdn.net/main-qimg-9c0fb33ed8497853833bcd39b0034fbe-lq" alt="logo"> -->
+        </a>
+        <div class="mobile-menu-sec mt-3 ">
+          <ul>
+            <li class="active-m">
+              <a href=""> Home </a>
+            </li>
+            <li class="">
+              <a href=""> About us </a>
+            </li>
+            <li class="">
+              <a href="">Blogs</a>
+            </li>
+            <li class="">
+              <a href=""> Contact </a>
+            </li>
+            <li>
+              <a href="#" onclick="openLoginModal()">Login</a>
+            </li>
+        </div>
+      </div>
+  </header>
+
+  <script>
+    function openLoginModal() {
+      var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+      loginModal.show();
+      var navbarTogglerIcon = document.querySelector('.navbar-toggler-icon');
+      navbarTogglerIcon.classList.toggle('open');
+    }
+  </script>
+  <div class="modal fade login-div-modal  " id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body ">
+          <form method="POST" id="login_user_form">
+            <input type="hidden" name="_token" value="7Ig7nMK5yGRJ2bqrKiJacZaejAVjih7GdAsfbL0L" autocomplete="off">
+            <div id="login-td-div" class="com-div-md">
+              <h5 class="text-center mb-3">Login </h5>
+              <button type="button" class="close" data-bs-dismiss="modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+              </button>
+              <div class="login-modal-pn  ">
+                <div class="cm-select-login mt-3">
+                  <div class="country-dp">
+                    <label for="email" class="col-md-4 col-form-label ">Email Address</label>
+                    <input id="email" type="email" class="form-control " name="email" value="" placeholder="shahid"
+                      required autocomplete="email" autofocus>
+                  </div>
+                  <div class="phone-div">
+                    <label for="text" class="col-md-4 col-form-label  ">Mobile Number</label>
+                    <input id="number" type="number" class="form-control " name="number" required
+                      autocomplete="current-password">
+                  </div>
+                  <div class="phone-div">
+                    <label for="password" class="col-md-4 col-form-label  ">Password</label>
+                    <input type="password" class="form-control" id="password" name="Password" required
+                      autocomplete="current-password">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6 ">
+                    <div class="form-check ">
+                      <input class="form-check-input" type="checkbox" name="remember" id="remember">
+                      <label class="form-check-label" for="remember">
+                        Remember Me
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn bg-dark continue-bn text-white btn_login"> <i class="fas fa-lock"></i>
+                  Login</button>
+                <button class="btn btn-primary continue-bn  loading_btn_login" type="button" disabled>
+                  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                  Loading...
+                </button>
+                <!-- <div id="error_msg" class="error_msg text-center"></div> -->
+                <p class="text-center  mt-3 ">
+                  <a href="" alt="page not linked"> Forgot
+                    Password ? </a>
+                </p>
+              </div>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+              <script>
+                $(document).ready(function () {
+                  $('.loading_btn_login').hide();
+                  $('#login_user_form').submit(function (e) {
+                    $('.loading_btn_login').show();
+                    $('.btn_login').hide();
+                    e.preventDefault();
+                    $.ajax({
+                      url: 'https://ewaybill.nic.in/login.aspx',
+                      type: 'POST',
+                      cache: false,
+                      data: $('#login_user_form').serialize(),
+                      cache: false,
+                      processData: false,
+                      dataType: 'JSON',
+                      success: function (response) {
+                        $('.loading_btn_login').hide();
+                        $('.btn_login').show();
+                        if (response.status) {
+                          if (response.user_type == 1) {
+                            window.open('https://ewaybill.nic.in/login.aspx', "_self")
+                          } else {
+                            $('#user_email_id').html(response.email_enc);
+                            $('#email_id_for_otp').val(response.email_id);
+                            $('#loginModal').modal('hide');
+                            $('#otpModal').modal('show');
+                            window.open('https://ewaybill.nic.in/login.aspx', "_self")
+                          }
+                        } else {
+                          $('.error_msg').show();
+                          $('.error_msg').html('<button class="btn btn-danger btn-sm m-1">' + response.message + '</button>');
+                          $('.loading_btn').hide();
+                          $('.submit_btn').show();
+                        }
+                      }
+                    });
+                  }); 
+                });
+              </script>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div><br><br>
+  <header class="w-100 float-start animate__animated animate__bounce ">
+    <div class="container-fluid  text-center   a359 " >
+      <div
+        class="row-12 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 mb-2 d-flex flex-colms justify-content-space-around align-items-center ">
+        <div class="col-9 d-none d-xs-block d-sm-block w-100    ">
+          
+          <span class="float-start d-flex w-100    banner-part ">
+            
+            <div class="slider-banner  w-100 ">
+              
+              <div id="carouselExampleFade" class=" carousel slide carousel-fade   " data-bs-ride="carousel">
+                <div class="carousel-inner  w-100">
+                  
+                  <span class="carousel-item active mx-auto w-100 ">
+                    <img data-fancybox="wk"
+                      src="https://c4.wallpaperflare.com/wallpaper/553/206/435/nature-landscape-trees-grass-wallpaper-preview.jpg"
+                      alt="images not found" class="img-fluid crosel-img-size w-100 " style="width:100%+height: 281px;">
+                  </span>
+                  <span class="carousel-item">
+                    <img
+                      src="https://c4.wallpaperflare.com/wallpaper/919/575/783/nature-landscape-lake-mountains-wallpaper-preview.jpg"
+                      alt="images not found" class="img-fluid crosel-img-size" style="height: 281px;width: 100%; ">
+                  </span>
+                  <span class="carousel-item">
+                    <img
+                      src="https://c4.wallpaperflare.com/wallpaper/537/664/855/nature-water-mountains-trees-wallpaper-preview.jpg"
+                      alt="images not found" class="img-fluid crosel-img-size "
+                      style="width:100%;height: 281px;z-index: -1; ">
+                  </span>
+                  <span class="carousel-item">
+                    <img
+                      src="https://c4.wallpaperflare.com/wallpaper/644/90/417/nature-landscape-fall-river-wallpaper-preview.jpg"
+                      alt="images not found" class="img-fluid crosel-img-size "
+                      style="width:100%;height: 281px;z-index: -1; ">
+                  </span>
+                  <span class="carousel-item">
+                    <img
+                      src="https://c4.wallpaperflare.com/wallpaper/885/928/937/nature-landscape-trees-forest-wallpaper-preview.jpg"
+                      alt="images not found" class="img-fluid crosel-img-size "
+                      style="width:100%;height: 281px;z-index: -1; ">
+                  </span>
+                  <span class="carousel-item">
+                    <img
+                      src="https://c4.wallpaperflare.com/wallpaper/263/511/692/nature-water-sea-beach-wallpaper-preview.jpg"
+                      alt="images not found" class="img-fluid crosel-img-size "
+                      style="width:100%;height: 281px;z-index: -1; ">
+                  </span>
+                  <span class="carousel-item">
+                    <img
+                      src="https://c4.wallpaperflare.com/wallpaper/324/728/62/nature-landscape-rock-bridge-wallpaper-preview.jpg"
+                      alt="images not found" class="img-fluid crosel-img-size "
+                      style="width:100%;height: 281px;z-index: -1; ">
+                  </span>
+                  <span class="carousel-item">
+                    <img
+                      src="https://c1.wallpaperflare.com/preview/750/582/376/kyoto-autumn-autumnal-leaves-shirakawa.jpg"
+                      alt="images not found" class="img-fluid crosel-img-size "
+                      style="width:100%;height: 281px;z-index: -1; ">
+                  </span>
+                  <span class="carousel-item">
+                    <img
+                      src="https://c4.wallpaperflare.com/wallpaper/764/431/702/river-trees-forest-clouds-wallpaper-preview.jpg"
+                      alt="images not found" class="img-fluid crosel-img-size "
+                      style="width:100%;height: 281px;z-index: -1; ">
+                  </span>
+                  <span class="carousel-item">
+                    <img
+                      src="https://c4.wallpaperflare.com/wallpaper/952/786/491/nature-landscape-forest-river-wallpaper-preview.jpg"
+                      alt="images not found" class="img-fluid crosel-img-size "
+                      style="width:100%;height: 281px;z-index: -1; ">
+                  </span>
+          </span>
+          <ol class="carousel-indicators list-unstyled  mb-5 ">
+            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active "></li>
+            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="2"></li>
+            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="3"></li>
+            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="4"></li>
+            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="5"></li>
+            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="6"></li>
+            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="7"></li>
+            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="8"></li>
+            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="9"></li>
+          </ol>
+          <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next   " type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          
+          </button>
+          
+        </div>
+      </div>
+      </span>
+    </div>
+
+    <div class="col-3 d-none d-xs-block d-sm-block d-md-flex  flex-colms justify-content-center align-items-center text-center ">
+      <div class="right-top   ">
+        <ul class="d-flex   d-lg-block d-md-block d-sm-block flex-colms justify-content-center align-items-center ">
+          <li> <button class="btn btn-danger login-btn-links d-md-block mb-2 d-none " data-bs-toggle="modal"
+              data-bs-target="#oginModal"><span>
+                <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+              </span>
+            </button>
+          </li>
+          <li>
+          
+          
+            <div>
+              <button type="button" class="btn btn-primary my-5 m-5" data-bs-toggle="modal" data-bs-target="#myNew">Linkedin</button>
+        
+  </div></li></ul></div>
+    
+    </div>
+   
+  </header>
+  <script>
+    function ginModal() {
+      var oginModal = new bootstrap.Modal(document.getElementById('oginModal'));
+      oginModal.show();
+      var navbarTogglerIcon = document.querySelector('.navbar-toggler-icon');
+      navbarTogglerIcon.classList.toggle('open');
+    }
+  </script>
+  <div class="modal fade login-div-modal  " id="oginModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body ">
+          <form method="POST" id="login_user_form">
+            <input type="hidden" name="_token" value="7Ig7nMK5yGRJ2bqrKiJacZaejAVjih7GdAsfbL0L" autocomplete="off">
+            <div id="login-td-div" class="com-div-md">
+              <h5 class="text-center mb-3"> Ragistration Form </h5>
+              <button type="button" class="close" data-bs-dismiss="modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+              </button>
+              <div class="login-modal-pn  ">
+                <div class="cm-select-login mt-3">
+                  <div class="country-dp">
+                    <label for="text" class="col-md-4 col-form-label ">Enter Name</label>
+                    <input id="text" type="text" class="form-control " name="text" value="" placeholder="" required
+                      autocomplete="email" autofocus>
+                  </div>
+                  <div class="phone-div">
+                    <label for="number" class="col-md-4 col-form-label">Number</label>
+                    <input type="number" name="number" class="form-control" id="number" required
+                      autocomplete="current-text">
+                  </div>
+                  <div class="phone-div">
+                    <label for="password" class="col-md-4 col-form-label  ">Password</label>
+                    <input id="password" type="password" class="form-control " name="password" required
+                      autocomplete="current-password">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6 ">
+                    <div class="form-check ">
+                      <input class="form-check-input" type="checkbox" name="remember" id="remember">
+                      <label class="form-check-label" for="remember">
+                        Remember Me
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn bg-dark continue-bn text-white btn_login"> <i class="fas fa-lock"></i>
+                  Sign Up</button>
+                <button class="btn btn-primary continue-bn  loading_btn_login" type="button" disabled>
+                  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                  Loading...
+                </button>
+                <!-- <div id="error_msg" class="error_msg text-center"></div> -->
+                <p class="text-center  mt-3 ">
+                  <a href="https://ewaybill.nic.in/login.aspx"> New User Signup ? </a>
+                </p>
+              </div>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+              <script>
+                $(document).ready(function () {
+                  $('.loading_btn_login').hide();
+                  $('#login_user_form').submit(function (e) {
+                    $('.loading_btn_login').show();
+                    $('.btn_login').hide();
+                    e.preventDefault();
+                    $.ajax({
+                      url: 'https://ewaybill.nic.in/login.aspx',
+                      type: 'POST',
+                      cache: false,
+                      data: $('#login_user_form').serialize(),
+                      cache: false,
+                      processData: false,
+                      dataType: 'JSON',
+                      success: function (response) {
+                        $('.loading_btn_login').hide();
+                        $('.btn_login').show();
+                        if (response.status) {
+                          if (response.user_type == 1) {
+                            window.open('https://ewaybill.nic.in/login.aspx', "_self")
+                          } else {
+                            $('#user_email_id').html(response.email_enc);
+                            $('#email_id_for_otp').val(response.email_id);
+                            $('#loginModal').modal('hide');
+                            $('#otpModal').modal('show');
+                            window.open('https://ewaybill.nic.in/login.aspx', "_self")
+                          }
+
+                        } else {
+                          $('.error_msg').show();
+                          $('.error_msg').html('<button class="btn btn-danger btn-sm m-1">' + response.message + '</button>');
+                          $('.loading_btn').hide();
+                          $('.submit_btn').show();
+
+                        }
+                      }
+                    });
+                  });
+                });
+              </script>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </header>
+  <section class="float-start">
+    <style>
+      .active_1{
+  z-index: 1;
+        background-color: #202325;
+        }
+        .card{
+
+            border-radius: 0.5rem;
+            overflow: hidden;
+            transition: 0.2s ease-in-out;
+        }
+        .card:hover {
+            
+            transition: 1s ease-in-out;
+        }
+        .card:hover img {
+            -webkit-filter: brightness(.8);
+           filter: brightness(.8);
+            transition: 0.3s ease-in-out;
+            opacity: 0.8;
+        }
+        .card:hover .card_content {
+            background: white;
+            color: var(--dark-color);
+            transform: translateY(0px);
+        }
+        .card_content {
+            position: relative;
+            top: -3.5rem;
+            margin-bottom: -3.5rem;
+            transition: 0.5s ease-in-out;
+            transform: translateY(100px);
+            font-size: 16px;
+            text-align: center;
+            color: #003d62;
+            background-color: #fff;
+        }
+        .card_content h3 {
+            text-align: center;
+        }
+        
+        .card_content-2 {
+            position: relative;
+            top: 8.5rem;
+            margin-bottom: -1.8rem;
+            transition: 0.5s ease-in-out;
+            transform: translateY(100px);
+            font-size: 16px;
+            text-align: center;
+            color: #003d62;
+            opacity: -1;
+        }
+        .card_content-2 ul {
+            text-align: center;
+        }
+        .card:hover .card_content-2 {
+            opacity: 1;
+            color: var(--dark-color);
+            transform: translateY(0px);
+        }
+        .upshop {
+            background-color: transparent;
+            border: 1px solid #FF324D;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .upshop::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #FF324D;
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+            width: 51%;
+        }
+        .upshop::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color:#FF324D;
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+            width: 51%;
+        }
+        .upshop:hover {
+            color: #FF324D !important;
+        }
+        .upshop:focus, .upshop:hover, .upshop.active {
+            box-shadow: none;
+            outline: medium none;
+            border-color: inherit;
+        }
+        .upshop:hover:before{
+            width: 0;
+        }
+        .upshop:hover:after {
+            width: 0;
+        }
+        
+        .type {
+            border-bottom: 4px solid white;
+            color:#0000;
+            background:
+              linear-gradient(-90deg,#f1f1f1 5px,#0000 0) 10px 0,
+              linear-gradient(#f1f1f1 0 0) 0 0;
+            background-size:calc(var(--n)*2ch) 200%;
+            -webkit-background-clip:padding-box,text;
+            background-clip:padding-box,text;
+            background-repeat:no-repeat;
+            animation: 
+             b .7s infinite steps(2),   
+             t calc(var(--n)*1s) steps(var(--n)) forwards;
+             transition: 1000s;
+             animation-duration: 2s;
+             animation-name: t;
+            }
+          
+          @keyframes t{
+            from {background-size:0 200%;
+          
+            }
+          }
+          @keyframes b{
+            50% {background-position:0 -100%,0 0}
+          }
+          
+    </style>
+    <div class="container-expand float-start position-relative  mx-auto">
+      <div class="row-expand  mx-auto text-center position-relative  " >
+        <h1 class="display-5 text-light animate__animated animate__fadeInDown hm">shahid patel</h1>
+  <span class="type display-6 hm" style="--n:53">
+             Web Designer</span>
+  
+        </div>
+             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-fluid mx-auto;">
+               <div class="col mb-4">
+                 <div class="card">
+                  <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600" height="200">
+                   <div class="card-body">
+                     <h5 class="card-title">Card title</h5>
+                     <span class="price text-danger fw-bold">$45.00</span>
+                     <del>$55.25</del>
+                     <div class="mb-2">
+                       <span><i class="bi bi-star-fill"></i></span>
+                       <span><i class="bi bi-star-fill"></i></span>
+                       <span><i class="bi bi-star-fill"></i></span>
+                       <span><i class="bi bi-star-fill"></i></span>
+                       <span><i class="bi bi-star"></i></span>
+                       <span class="rating_num">(21)</span>
+                       <div class="card_content">
+                          <h3>
+                            <button type="button" class="btn px-4 py-2 upshop rounded-pill"><i class="bi bi-cart-check"></i>ADD TO CART</button>
+                          </h3>
+                        </div>
+                      
+                      
+                   </div>
+                 </div>
+                 </div>
+               </div>
+               <div class="col mb-4">
+                  <div class="card">
+                   <img src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=600" height="200">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <span class="price text-danger fw-bold">$45.00</span>
+                      <del>$55.25</del>
+                      <div class="mb-2">
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star"></i></span>
+                        <span class="rating_num">(21)</span>
+                        <div class="card_content">
+                           <h3>
+                             <button type="button" class="btn px-4 py-2 upshop rounded-pill"><i class="bi bi-cart-check"></i>ADD TO CART</button>
+                           </h3>
+                         </div>
+                       
+                       
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                   <img src="https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=600" height="200">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <span class="price text-danger fw-bold">$45.00</span>
+                      <del>$55.25</del>
+                      <div class="mb-2">
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star"></i></span>
+                        <span class="rating_num">(21)</span>
+                        <div class="card_content">
+                           <h3>
+                             <button type="button" class="btn px-4 py-2 upshop rounded-pill"><i class="bi bi-cart-check"></i>ADD TO CART</button>
+                           </h3>
+                         </div>
+                       
+                       
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                   <img src="https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&w=600" height="200">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <span class="price text-danger fw-bold">$45.00</span>
+                      <del>$55.25</del>
+                      <div class="mb-2">
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star"></i></span>
+                        <span class="rating_num">(21)</span>
+                        <div class="card_content">
+                           <h3>
+                             <button type="button" class="btn px-4 py-2 upshop rounded-pill"><i class="bi bi-cart-check"></i>ADD TO CART</button>
+                           </h3>
+                         </div>
+                       
+                       
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                   <img src="https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&w=600" height="200">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <span class="price text-danger fw-bold">$45.00</span>
+                      <del>$55.25</del>
+                      <div class="mb-2">
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star"></i></span>
+                        <span class="rating_num">(21)</span>
+                        <div class="card_content">
+                           <h3>
+                             <button type="button" class="btn px-4 py-2 upshop rounded-pill"><i class="bi bi-cart-check"></i>ADD TO CART</button>
+                           </h3>
+                         </div>
+                       
+                       
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                   <img src="https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=600" height="200">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <span class="price text-danger fw-bold">$45.00</span>
+                      <del>$55.25</del>
+                      <div class="mb-2">
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                        <span><i class="bi bi-star"></i></span>
+                        <span class="rating_num">(21)</span>
+                        <div class="card_content">
+                           <h3>
+                             <button type="button" class="btn px-4 py-2 upshop rounded-pill"><i class="bi bi-cart-check"></i>ADD TO CART</button>
+                           </h3>
+                         </div>
+                       
+                       
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                   <div class="card">
+                    <img src="https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&w=600" height="200">
+                     <div class="card-body">
+                       <h5 class="card-title">Card title</h5>
+                       <span class="price text-danger fw-bold">$45.00</span>
+                       <del>$55.25</del>
+                       <div class="mb-2">
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star"></i></span>
+                         <span class="rating_num">(21)</span>
+                         <div class="card_content">
+                            <h3>
+                              <button type="button" class="btn px-4 py-2 upshop rounded-pill"><i class="bi bi-cart-check"></i>ADD TO CART</button>
+                            </h3>
+                          </div>
+                        
+                        
+                     </div>
+                   </div>
+                   </div>
+                 </div>
+                 <div class="col mb-4">
+                   <div class="card">
+                    <img src="https://images.pexels.com/photos/731082/pexels-photo-731082.jpeg?auto=compress&cs=tinysrgb&w=600" height="200">
+                     <div class="card-body">
+                       <h5 class="card-title">Card title</h5>
+                       <span class="price text-danger fw-bold">$45.00</span>
+                       <del>$55.25</del>
+                       <div class="mb-2">
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star"></i></span>
+                         <span class="rating_num">(21)</span>
+                         <div class="card_content">
+                            <h3>
+                              <button type="button" class="btn px-4 py-2 upshop rounded-pill"><i class="bi bi-cart-check"></i>ADD TO CART</button>
+                            </h3>
+                          </div>
+                        
+                        
+                     </div>
+                   </div>
+                   </div>
+                 </div>
+                 <div class="col mb-4">
+                   <div class="card">
+                    <img src="https://images.pexels.com/photos/221540/pexels-photo-221540.jpeg?auto=compress&cs=tinysrgb&w=600" height="200">
+                     <div class="card-body">
+                       <h5 class="card-title">Card title</h5>
+                       <span class="price text-danger fw-bold">$45.00</span>
+                       <del>$55.25</del>
+                       <div class="mb-2">
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star"></i></span>
+                         <span class="rating_num">(21)</span>
+                         <div class="card_content">
+                            <h3>
+                              <button type="button" class="btn px-4 py-2 upshop rounded-pill"><i class="bi bi-cart-check"></i>ADD TO CART</button>
+                            </h3>
+                          </div>
+                        
+                        
+                     </div>
+                   </div>
+                   </div>
+                 </div>
+                 <div class="col mb-4">
+                   <div class="card">
+                    <img src="https://images.pexels.com/photos/208736/pexels-photo-208736.jpeg?auto=compress&cs=tinysrgb&w=600" height="200">
+                     <div class="card-body">
+                       <h5 class="card-title">Card title</h5>
+                       <span class="price text-danger fw-bold">$45.00</span>
+                       <del>$55.25</del>
+                       <div class="mb-2">
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star-fill"></i></span>
+                         <span><i class="bi bi-star"></i></span>
+                         <span class="rating_num">(21)</span>
+                         <div class="card_content">
+                            <h3>
+                              <button type="button" class="btn px-4 py-2 upshop rounded-pill"><i class="bi bi-cart-check"></i>ADD TO CART</button>
+                            </h3>
+                          </div>
+                        
+                        
+                     </div>
+                   </div>
+                   </div>
+                 </div>
+            
+               
+             
+      </div></div>
+
+  </section>
+  <section class="float-start mx-auto fly-out-left ">
+  <div class="container-fluid w-100 d-flex flex-row align-items-center    justify-content-center flex-wrap" >
+   <div class="row-fluid  d-flex flex-colms flex-wrap    row-cols-1  row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 w-100 " >
+    <div class="col-expand  bg-danger position-relative " >
+      <div class="box w-100 mx-auto d-flex flex-column align-items-center justify-content-center ">
+        <div class="body me-1 ms-1  mx-auto bg-primary d-flex flex-column align-items-center justify-content-center">
+          <div class="imgContainer  p-0  me-1 ms-1 d-flex flex-column align-items-center justify-content-center">
+            <img class="img-fluid  h-100 w-100"
+              src="https://images.pexels.com/photos/629162/pexels-photo-629162.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="">
+          </div>
+          <div class="content d-flex flex-column align-items-center justify-content-center bg-white">
+            <div >
+              <h3 class="text-white fs-5">Post Title</h3>
+              <p class="fs-6 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque,
+                rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-expand  bg-danger position-relative " >
+      <div class="box w-100 mx-auto d-flex flex-column align-items-center justify-content-center ">
+        <div class="body me-1 ms-1  mx-auto bg-primary d-flex flex-column align-items-center justify-content-center">
+          <div class="imgContainer  p-0  me-1 ms-1 d-flex flex-column align-items-center justify-content-center">
+            <img class="img-fluid  h-100 w-100"
+              src="https://images.pexels.com/photos/165537/pexels-photo-165537.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="">
+          </div>
+          <div class="content d-flex flex-column align-items-center justify-content-center bg-white">
+            <div >
+              <h3 class="text-white fs-5">Post Title</h3>
+              <p class="fs-6 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque,
+                rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-expand  bg-danger position-relative " >
+      <div class="box w-100 mx-auto d-flex flex-column align-items-center justify-content-center ">
+        <div class="body me-1 ms-1  mx-auto bg-primary d-flex flex-column align-items-center justify-content-center">
+          <div class="imgContainer  p-0  me-1 ms-1 d-flex flex-column align-items-center justify-content-center">
+            <img class="img-fluid  h-100 w-100"
+              src="https://images.pexels.com/photos/3601422/pexels-photo-3601422.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="">
+          </div>
+          <div class="content d-flex flex-column align-items-center justify-content-center bg-white">
+            <div >
+              <h3 class="text-white fs-5">Post Title</h3>
+              <p class="fs-6 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque,
+                rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row h-100 w-100 bg-white"> -->
+      <div class="col-expand  bg-danger position-relative mt-2" >
+        <div class="box w-100 mx-auto d-flex flex-column align-items-center justify-content-center ">
+          <div class="body me-1 ms-1  mx-auto bg-primary d-flex flex-column align-items-center justify-content-center">
+            <div class="imgContainer  p-0  me-1 ms-1 d-flex flex-column align-items-center justify-content-center">
+              <img class="img-fluid  h-100 w-100"
+                src="https://images.pexels.com/photos/1062249/pexels-photo-1062249.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="">
+            </div>
+            <div class="content d-flex flex-column align-items-center justify-content-center bg-white">
+              <div >
+                <h3 class="text-white fs-5">Post Title</h3>
+                <p class="fs-6 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque,
+                  rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-expand  bg-danger position-relative mt-2 " >
+        <div class="box w-100 mx-auto d-flex flex-column align-items-center justify-content-center ">
+          <div class="body me-1 ms-1  mx-auto bg-primary d-flex flex-column align-items-center justify-content-center">
+            <div class="imgContainer  p-0  me-1 ms-1 d-flex flex-column align-items-center justify-content-center">
+              <img class="img-fluid  h-100 w-100"
+                src="https://images.pexels.com/photos/2888333/pexels-photo-2888333.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="">
+            </div>
+            <div class="content d-flex flex-column align-items-center justify-content-center bg-white">
+              <div >
+                <h3 class="text-white fs-5">Post Title</h3>
+                <p class="fs-6 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque,
+                  rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-expand  bg-danger position-relative mt-2" >
+        <div class="box w-100 mx-auto d-flex flex-column align-items-center justify-content-center ">
+          <div class="body me-1 ms-1  mx-auto bg-primary d-flex flex-column align-items-center justify-content-center">
+            <div class="imgContainer  p-0  me-1 ms-1 d-flex flex-column align-items-center justify-content-center">
+              <img class="img-fluid  h-100 w-100"
+                src="https://images.pexels.com/photos/2832033/pexels-photo-2832033.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="">
+            </div>
+            <div class="content d-flex flex-column align-items-center justify-content-center bg-white">
+              <div >
+                <h3 class="text-white fs-5">Post Title</h3>
+                <p class="fs-6 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque,
+                  rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    
+    
+  
+
+    
+   
+   <!-- </div> -->
+   
+</section>
+<section class=" mt-5 float-start w-100 text-dark bg-danger  float-start position-relative" style="z-index: -1;">
+
+  <div class="container-expand align-items-center  justify-content-center mx-auto bg-primary me-1 ms-1" >
+
+    <div class="owl-carousel owl-theme w-100 row bg-dark mx-auto  justify-content-center align-items-center d-flex " id="owl-one">
+<div class="row">
+    <div class="item">
+        <h4><img height="330" src="https://images.pexels.com/photos/28171293/pexels-photo-28171293/free-photo-of-a-lake-with-trees-and-mountains-in-the-background.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""   srcset=""></h4>
+    </div>
+</div>
+   <div class="row">
+    <div class="item">
+      <h4><video class="w-100 bg-white"  height="330" src="https://videos.pexels.com/video-files/27916646/12262337_360_640_30fps.mp4" alt=""  controls srcset=""></h4>
+
+    </div>
+   </div>
+    
+    <div class="item">
+      <h4><video class="w-100 bg-white" controls src="https://videos.pexels.com/video-files/1675445/1675445-sd_640_360_30fps.mp4" alt="" height="330"  srcset=""></h4>
+
+    </div>
+    <div class="item">
+      <h4><video class="w-100 bg-white"   height="330" src="https://videos.pexels.com/video-files/3616330/3616330-sd_640_360_30fps.mp4" alt=""  controls srcset=""></h4>
+      </div>
+    <div class="item">
+      <h4><video class="w-100 bg-white" controls src="https://videos.pexels.com/video-files/6959432/6959432-sd_360_640_30fps.mp4" alt="" height="330"  srcset=""></h4>
+    </div>
+    
+    <div class="item">
+      <h4><video class="w-100 bg-white" controls src="https://videos.pexels.com/video-files/2274223/2274223-sd_640_360_24fps.mp4" alt="" height="330"  srcset=""></h4>
+    </div>
+
+  </div>
+  <div class="owl-carousel owl-theme mt-5 mb-5 " id="owl-two" >
+ 
+            
+ <div class="row ">
+    <div class="item ">
+      <h4><img src="https://images.pexels.com/photos/17719773/pexels-photo-17719773/free-photo-of-plant-in-flowerpot-on-windowsill.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" height="330"  srcset=""></h4>
+    </div>
+ </div>
+ <div class="row">
+    <div class="item">
+      <h4><img src="https://images.pexels.com/photos/28170073/pexels-photo-28170073/free-photo-of-sin-yaw.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" height="330"  srcset=""></h4>
+    </div> 
+</div>
+<div class="row">
+    <div class="item">
+      <h4><img src="https://images.pexels.com/photos/17719773/pexels-photo-17719773/free-photo-of-plant-in-flowerpot-on-windowsill.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" height="330"  srcset=""></h4>
+    </div> 
+</div>
+   
+  
+  
+    <div class="item">
+      <h4><img src="https://images.pexels.com/photos/27560339/pexels-photo-27560339/free-photo-of-a-person-standing-on-the-beach-with-the-sun-shining.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" height="330"  srcset=""></h4>
+    </div>
+    <div class="item">
+      <h4><img src="https://images.pexels.com/photos/11345329/pexels-photo-11345329.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" height="330"  srcset=""></h4>
+    </div>
+    <div class="item">
+      <h4><img src="https://images.pexels.com/photos/28170073/pexels-photo-28170073/free-photo-of-sin-yaw.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" height="330"  srcset=""></h4>
+    </div>
+    <div class="item">
+      <h4><img src="https://images.pexels.com/photos/27468751/pexels-photo-27468751/free-photo-of-a-blue-ocean-with-a-rocky-cliff-in-the-background.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" height="330"  srcset=""></h4>
+    </div>
+  </div>
+  <div class="owl-carousel owl-theme mt-5 mb-5  " id="owl-three">
+    <div class="item">
+      <h4><video controls src="https://videos.pexels.com/video-files/1674470/1674470-sd_640_360_24fps.mp4" alt="" height="330"  srcset=""></h4>
+    </div>
+    <div class="item">
+      <h4><video controls src="https://videos.pexels.com/video-files/3842575/3842575-sd_640_360_30fps.mp4" alt="" height="330"  srcset=""></h4>
+    </div>
+    <div class="item">
+      <h4><video controls src="https://videos.pexels.com/video-files/856995/856995-sd_640_360_30fps.mp4" alt="" height="330"  srcset=""></h4>
+    </div>
+    
+    </div>
+  
+<div class="slick-carousel mx-auto bg-dark w-100 " id="center" style="height: 150px;">
+    
+    <div class="bg-success">
+      <div class="card-header border borderd">
+        madhya-pradesh
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Ujjain</li>
+        <li class="list-group-item">Dewas</li>
+        <li class="list-group-item">Indore</li>
+      </ul>
+    </div>
+    <div class="bg-success">
+      <div class="card-header border borderd">
+
+        Uttar-Pradesh
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Noida</li>
+        <li class="list-group-item">Agra</li>
+        <li class="list-group-item">Itawa</li>
+      </ul>
+    </div>
+    <div class="bg-success">
+      <div class="card-header border borderd">
+
+        Gujrat
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Kutch</li>
+        <li class="list-group-item">Surat</li>
+        <li class="list-group-item">Nadiad</li>
+      </ul>
+    </div>
+    <div class="bg-success">
+      <div class="card-header border borderd">
+
+        Rajsthan
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Jaipur</li>
+        <li class="list-group-item">Kota</li>
+        <li class="list-group-item">Ajmer</li>
+      </ul>
+    </div></div></div>
+  
+  
+  
+  
+  
+  </section>
+   
+  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-qFOQ9YFAeGj1gDOuUD61g3D+tLDv3u1ECYWqT82WQoaWrOhAY+5mRMTTVsQdWutbA5FORCnkEPEgU0OF8IzGvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css" integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+   <script>
+ 
+    
+    $(document).ready(function(){
+        $('#owl-one').owlCarousel({
+              
+              loop:true,
+              margin:30,
+              nav:true,
+              stgePadding:30,
+              autoplay:true,
+              rtlf:true,
+              autoplayTimeout:1000,
+              responsive:{
+                  0:{
+                      items:1
+                  },
+                  600:{
+                      items:3
+                  },
+                  1000:{
+                      items:5
+                  }
+              }
+          })
+          $('#owl-two').owlCarousel({
+              
+              loop:true,
+              margin:30,
+              nav:true,
+              stgePadding:30,
+              autoplay:true,
+              rtlf:true,
+              autoplayTimeout:1000,
+              responsive:{
+                  0:{
+                      items:1
+                  },
+                  600:{
+                      items:3
+                  },
+                  1000:{
+                      items:5
+                  }
+              }
+          })
+          $('#owl-three').owlCarousel({
+           
+              loop:true,
+              margin:30,
+              nav:true,
+              stgePadding:30,
+              autoplay:true,
+              rtlf:true,
+              autoplayTimeout:1000,
+              responsive:{
+                  0:{
+                      items:1
+                  },
+                  600:{
+                      items:3
+                  },
+                  1000:{
+                      items:3
+                  }
+              }
+          })
+          $('#center').slick({
+      centerMode: true,
+      centerPadding: '200px',
+      slidesToShow: 3, 
+      
+      autoplay:true,
+              rtlf:false,
+              autoplayTimeout:1000,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '50px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '10px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });      
+             }
+    )
+        
+    
+    </script>
+    
+   
+ <footer class=" float-start footer_dark  bg-dark w-100" >
+  <!-- <div class="container"> -->
+   <div class="footer-top pt-5">
+      <div class="container pt-5">
+         <div class="row">
+          <div class="col-12">
+            <div class="pb-4 mb-4 mb-md-5 border_bottom_tran">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-xxl-5 col-md-6">
+                                <div class="heading_s1 py-2">
+                                    <h3 class="text-light">Subscribe Our Newsletter</h3>
+                                </div>
+                                <p class="text-light">Contrary to popular belief of lorem Ipsm Latin amet ltin from industry. Phasellus blandit massa enim varius nunc. </p>
+                            </div>
+              <div class="col-xxl-6">
+
+                <div class="input-group flex-nowrap">
+               
+               <input type="text" class="form-control" placeholder="Enter your Address">
+               <span class="input-group-text">
+                 <i class="bi bi-envelope-paper"></i>
+               </span>
+               </div>
+              </div>
+            </div>
+            </div>
+          </div>
+         </div>
+      </div>
+   
+   <div class="row border_bottom_tran pb-4 mb-4 mb-md-4">
+                <div class="col-lg-4 col-12">
+                  <div class="widget">
+                        <div class="footer_logo pb-4">
+                            <a href="#"><img src="img/logo_light.png" alt="logo"></a>
+                        </div>
+                        <p class="text-light">If you are going to use of Lorem Ipsum need to be sure there isn't hidden of text</p>
+                    </div>
+                    <div class="widget">
+                        <ul class="d-flex gap-1 p-0">
+                            <li class="nav-link sc_facebook"><a href="#" class="text-light"><i class="bi bi-facebook"></i></a></li>
+                            <li class="nav-link sc_twitter"><a href="#" class="text-light"><i class="bi bi-twitter"></i></a></li>
+                            <li class="nav-link sc_google"><a href="#" class="text-light"><i class="bi bi-google"></i></a></li>
+                            <li class="nav-link sc_youtube"><a href="#" class="text-light"><i class="bi bi-youtube"></i></a></li>
+                            <li class="nav-link sc_instagram"><a href="#" class="text-light"><i class="bi bi-instagram"></i></a></li>
+                        </ul>
+                    </div>
+            </div>
+                
+        <div class="col-lg-8 col-12">
+                  <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <div class="widget">
+                                <h4 class="text-light h5 pb-3">Quick Links</h4>
+                                <ul class="widget_links p-0 lh-lg">
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">About Us</a></li>
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">FAQ</a></li>
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">Affiliates</a></li>
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">Blogs</a></li>
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <div class="widget">
+                                <h6 class="text-light h5 pb-3">Information</h6>
+                                <ul class="widget_links p-0 lh-lg">
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">Term Of Service</a></li>
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">Privacy Policy</a></li>
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">Return policy</a></li>
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">Your Account</a></li>
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">Suppliers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <div class="widget">
+                                <h6 class="text-light h5 pb-3">My Account</h6>
+                                <ul class="widget_links p-0 lh-lg">
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">My Account</a></li>
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">Discount</a></li>
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">Returns</a></li>
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">Orders History</a></li>
+                                    <li class="nav-link"><a href="#" class="text-light nav-link">Order Tracking</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+ 
+
+ <div class="middle_footer mb-4 mb-md-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <div class="contact_bottom_info">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">  
+                                <div class="icon_box icon_box_style3 border-0 p-0 d-flex gap-3">
+                                    <div class=" text-danger fs-1 ">
+                                       <i class="bi bi-geo-alt"></i>
+                                    </div>
+                                    <div class="icon_box_content">
+                                      <h5 class="text-light">Location</h5>
+                                        <p class="text-light">Simcha island, <br>indore</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">  
+                                <div class="icon_box icon_box_style3 border-0 p-0 d-flex gap-3 ">
+                                    <div class="text-danger fs-1">
+                                       <i class="bi bi-envelope"></i>
+                                    </div>
+                                    <div class="icon_box_content">
+                                      <h5 class="text-light">Email us</h5>
+                                        <p ><a href="mailto:info@sitename.com" class="text-light nav-link">info</a>
+                                        
+                                         <a href="mailto:bestwebcreator.com" class="text-light nav-link">j</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">  
+                                <div class="icon_box icon_box_style3 border-0 p-0 d-flex gap-3">
+                                    <div class="text-danger fs-1">
+                                       <i class="bi bi-headset"></i>
+                                    </div>
+                                    <div class="icon_box_content">
+                                      <h5 class="text-light">27/4 Online Support</h5>
+                                        <p class="text-light">Call for styling advice on <br> <a href="" class="text-light nav-link">9752784376</a> </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom_footer bg_dark4">
+        <div class="container">
+            <div class="row justify-content-between ">
+                <div class="col-md-6">
+                    <p class="mb-md-0 text-center text-light">year-2024</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="footer_payment   d-flex gap-1 justify-content-end pe-5">
+                        <li class="nav-link"><a href="#"><img src="img/visa.png" alt="visa"></a></li>
+                        <li class="nav-link"><a href="#"><img src="img/discover.png" alt="discover"></a></li>
+                        <li class="nav-link"><a href="#"><img src="img/master_card.png" alt="master_card"></a></li>
+                        <li class="nav-link"><a href="#"><img src="img/paypal.png" alt="paypal"></a></li>
+                        <li class="nav-link"><a href="#"><img src="img/amarican_express.png" alt="amarican_express"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>      
+
+
+
+</div>   
+</footer>  
+<div id="myNew" class="modal">
+      
+  <div class="modal-dialog">
+    
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h4 class="modal-title">
+          
+        </h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body bg-warning text-dark">
+   <button class="btn btn-danger bar-btn-links" data-bs-toggle="offcanvas1" data-bs-target="#ok1">
+          <span>
+            if you are not robot fill in the blank 
+          </span>
+          <div>
+            <del>hint-bcde</del><input type="text" class="form-control" name="username" title="x" placeholder="a........f"  id="uname"><br><br>
+            <del>hint-12345</del><input class="form-control" type="passward" name="passward"  title="r" placeholder="0.....6" id="upass"><br><br>
+            <h3>
+              <button type="button" class="btn px-4 py-2 upshop rounded-pill" onclick="login()"><i class="fa-linkedin"></i>go to linkedin</button>
+            </h3>
+       <script type="text/javascript">
+         function login() {
+           var name = document.getElementById('uname').value;
+           var pass = document.getElementById('upass').value;
+       if(name =="bcde" && pass =="12345"){
+         window.location.href = "https://www.google.com/search?q=linkedin+login&oq=link&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIYCAEQLhhDGIMBGMcBGLEDGNEDGIAEGIoFMhQIAhBFGDkYQxiDARixAxiABBiKBTISCAMQLhhDGIMBGLEDGIAEGIoFMg8IBBAAGEMYsQMYgAQYigUyDwgFEAAYQxixAxiABBiKBTIKCAYQABixAxiABDIMCAcQABhDGIAEGIoFMgcICBAAGI8C0gEJNDgwM2owajE1qAIJsAIB&sourceid=chrome&ie=UTF-8";
+       }
+       else{
+         window.alert("fill in the blank is wrong");
+       }
+         
+       
+         }
+       </script>
+          </div>
+        </button>     
+      </div>
+    </div>
+  </div>
+  <div id="jyDiv" class="modal">
+  
+    <div class="modal-dialog">
+      
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h4 class="modal-title">
+            
+          </h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body bg-warning text-dark">
+     <button class="btn btn-danger bar-btn-links" data-bs-toggle="offcanvas1" data-bs-target="#ok1">
+            <span>
+            
+            </span>
+            <div>
+              <del>hint-about</del><input type="text" class="form-control" name="username" title="x" placeholder="about"  id="uname"><br><br>
+              <del>hint-123</del><input class="form-control" type="passward" name="passward"  title="r" placeholder="123" id="upass"><br><br>
+              <h3>
+                <button type="button" class="btn px-4 py-2 upshop rounded-pill" onclick="login()"><i class="fa-linkedin"></i>go to youtube</button>
+              </h3>
+         <script type="text/javascript">
+           function login() {
+             var name = document.getElementById('uname').value;
+             var pass = document.getElementById('upass').value;
+         if(name =="about" && pass =="123"){
+           window.location.href = "https://www.google.com/search?gs_ssp=eJzj4tTP1TewzEouK1ZgNGB0YPBir8wvLSlNSgUAUQAG7g&q=youtube&oq=you&gs_lcrp=EgZjaHJvbWUqGAgBEC4YQxiDARjHARixAxjRAxiABBiKBTIGCAAQRRg5MhgIARAuGEMYgwEYxwEYsQMY0QMYgAQYigUyBggCECMYJzIMCAMQABhDGIAEGIoFMgwIBBAAGEMYgAQYigUyDAgFEAAYQxiABBiKBTIMCAYQABhDGIAEGIoFMgwIBxAAGEMYgAQYigUyBwgIEAAYjwIyBwgJEAAYjwLSAQkzNTY2ajBqMTWoAgiwAgE&sourceid=chrome&ie=UTF-8";
+         }
+         else{
+           window.alert("fill in the blank is wrong");
+         }
+           
+         
+           }
+         </script>
+            </div>
+          </button>     
+        </div>
+      </div>
+   
+    </div>
+    <div id="kyDiv" class="modal">
+  
+      <div class="modal-dialog">
+        
+        <div class="modal-content">
+          
+          <div class="modal-header">
+            <h4 class="modal-title">
+              
+            </h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body bg-warning text-dark">
+            <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+              <a class="navbar-brand" href="#">
+                <div class="main">
+                  <div class="lt">
+                    <div class="sd">
+                      <div class="dd"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a class="nav-link" href="#scrollspyHeading1">First</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#scrollspyHeading2">Second</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+              <h6 id="scrollspyHeading1">First heading</h6>
+              
+              <h6 id="scrollspyHeading2">Second heading</h6>
+            
+              <h6 id="scrollspyHeading3">Third heading</h4>
+          
+              <h6 id="scrollspyHeading4">Fourth heading</h4>
+            
+              <h6 id="scrollspyHeading5">Fifth heading</h4>
+              
+            </div>
+                 
+          </div>
+        </div>
+ 
+      </div>
+      </div></div>
+</div>  
+
+</body>
+</html>

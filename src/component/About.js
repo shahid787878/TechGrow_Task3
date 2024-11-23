@@ -2,7 +2,8 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>
+<>
+<div className='position-relative'>
         <div className="section-1  w border borderd-3  justify-content-center mx-auto  w-100 ">
      
      <div id="demo" className="carousel slide" data-bs-ride="carousel">
@@ -64,8 +65,13 @@ const About = () => {
        <span className="carousel-control-next-icon p-2 bg-dark"></span>
        </button>
      </div>
-</div></div>
-  )
+</div>
+</div>
+     
+
+
+</>
+)
 }
 
 export default About

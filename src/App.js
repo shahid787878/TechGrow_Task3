@@ -8,16 +8,21 @@ import PhotoGallery from './component/PhotoGallary';
 import About from './component/About';
 import News from './component/News';
 import './App.css';
-
+import FetchDataLoading from './component/FetchDataLoading';
 function App() {
 return (
+	<>
 	<Router>
+
 	<div>
+
 		<Navbar />
 		<Routes>
+	
+
 		<Route path="/home" element={<Introduction />} />
 		<Route path="/about" element={<About />} />
-		<Route path="/news" element={<News />} />
+		<Route path="/news" element={<News /> } />
 		
 		
 		
@@ -26,6 +31,7 @@ return (
 		</Routes>
 	</div>
 	</Router>
+	</>
 );
 }
 

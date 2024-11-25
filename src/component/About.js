@@ -1,8 +1,10 @@
 import React from 'react'
+import New  from "./New";
 
 const About = () => {
   return (
 <>
+<div className="container-fluid  w-100 mt-4">
 <div className='position-relative'>
         <div className="section-1  w border borderd-3  justify-content-center mx-auto  w-100 ">
      
@@ -12,7 +14,7 @@ const About = () => {
          <div className="carousel-item active two " >
          <div className="  d-flex justify-content-center align-items-center h-100 w-100   text-center">
 
-    <img style={{height:'100vh'} } className="w-100" src="https://images.pexels.com/photos/248241/pexels-photo-248241.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+    <img style={{height:'100vh'} } className="w-100" src="https://images.pexels.com/photos/334978/pexels-photo-334978.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
     </div>           
            <div className="carousel-caption">
              <div className="animate__animated animate__fadeInDown">
@@ -27,7 +29,7 @@ const About = () => {
          </div>
          <div className="carousel-item box1 ">
     <div className=" mx-auto text-center">
-    <img style={{height:'100vh'} } className="w-100" src="https://images.pexels.com/photos/8721319/pexels-photo-8721319.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+    <img style={{height:'100vh'} } className="w-100" src="https://images.pexels.com/photos/381739/pexels-photo-381739.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
     </div> 
            <div className="carousel-caption ">
              <div className="animate__animated animate__fadeInDown ">
@@ -42,7 +44,7 @@ const About = () => {
          </div>
          <div className="carousel-item book ">
          <div className=" mx-auto text-center">
-    <img style={{height:'100vh'} } className="w-100" src=" https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=600"alt="" />
+    <img style={{height:'100vh'} } className="w-100" src=" https://images.pexels.com/photos/1043458/pexels-photo-1043458.jpeg?auto=compress&cs=tinysrgb&w=600"alt="" />
     </div>           
            <div className="carousel-caption">
              <div className="animate__animated animate__fadeInDown">
@@ -68,7 +70,8 @@ const About = () => {
 </div>
 </div>
      
-
+</div>
+<New />
 
 </>
 )

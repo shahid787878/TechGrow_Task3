@@ -1,14 +1,14 @@
-// src/App.js
 
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './component/Navbar';
 import Introduction from "./component/Introduction"
-import PhotoGallery from './component/PhotoGallary';
 import About from './component/About';
+
 import News from './component/News';
+import Contact from './component/Contact';
 import './App.css';
-import FetchDataLoading from './component/FetchDataLoading';
+import Former from './component/Former';
 function App() {
 return (
 	<>
@@ -22,17 +22,20 @@ return (
 
 		<Route path="/home" element={<Introduction />} />
 		<Route path="/about" element={<About />} />
-		<Route path="/news" element={<News /> } />
+		<Route path="/info" element={<News /> } />
 		
 		
 		
-		<Route path="/" element={<PhotoGallery />} />
+		<Route path="/contact" element={<Contact />} />
 
 		</Routes>
 	</div>
+<Former/>
 	</Router>
-	</>
-);
-}
 
+	</>
+
+);
+
+}
 export default App;

@@ -1,0 +1,79 @@
+    
+.carousel-item img{
+    border: 5px solid transparent;
+    width: 80%;
+    height: 300px;
+    
+    
+    }
+    span{
+        background-color: grey;
+    }
+    
+    button{
+        background:none;
+    border: none;
+    }
+    .carousel .inner{
+    border: 4px solid cyan;
+    display: flex;
+    
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    }
+    FORM{
+        display: flex;
+    }
+    .nn{
+        width: 50%;
+    justify-content: center;
+    border: 5PX SOLID pink;
+    margin: auto;
+    
+    text-align: center;
+        
+    }
+    .nn input{
+    
+    margin: 20px 0px;
+    border: 4PX SOLID greenyellow;
+    
+    }
+    #carouselControl{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+    
+        align-items: center;
+    }
+    .ol{
+        display: flex;
+        padding: 30px;
+        justify-content: space-around;
+    }
+    .po{
+        bottom: 0;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    margin-left: 50%;
+    
+        background-color: transparent;
+    }
+    .po a{
+        text-decoration: none;
+    
+    }
+    .po a:hover{
+        background-color: grey;
+    }
+    .carousel-item h5,p{
+        transform: translateY(-80px);
+    }
+    .ol p{
+        
+        margin: 60px 0px;
+        /* border: 3px solid red; */
+    }

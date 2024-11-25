@@ -1,5 +1,6 @@
 import { Link,useLocation } from 'react-router-dom'
 import React from 'react'
+import "./Navbar.css"
 // import Shop from './Shop';
 // import { useSelector } from 'react-redux';
 const Navbar = () => {
@@ -17,7 +18,7 @@ const Navbar = () => {
 <div className="container-fluid " >
        <Link className="navbar-brand animate__animated animate__bounce  " to="/" >
    
-     <h2 className="wrap typewrite text-dark text-decoration-none hm d-sm-display-6 d-md-display-5 d-lg-display-5 d-xl-display-5" data-period="2" data-type='[ "Kshipra River Ujjain" ]' >SHAHID </h2>
+     <h2 className=" wrap typewrite text-dark text-decoration-none hm d-sm-display-6 d-md-display-5 d-lg-display-5 d-xl-display-5" data-period="2" data-type='[ "Kshipra River Ujjain" ]' >SHAHID </h2>
        </Link>
        
        <div className="collapse navbar-collapse animate__animated animate__bounce" id="shahid">
@@ -30,7 +31,7 @@ const Navbar = () => {
            </li>
        
        <li className="nav-item ">
-           <Link className={`nav-link  ${location.pathname==="/"?"active":""}`} to="/news" >News</Link>
+           <Link className={`nav-link  ${location.pathname==="/"?"active":""}`} to="/info" >Info</Link>
            </li>    
             {/* <li className="nav-item ">
            <Link className={`nav-link  ${location.pathname==="/"?"active":""}`} to="/gallary" >Gallary</Link>

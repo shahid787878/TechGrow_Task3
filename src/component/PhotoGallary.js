@@ -4,7 +4,7 @@ import React from 'react'
 const PhotoGallary = () => {
   return (
 <>
-<div className="container-fluid float-start  mx-auto h-100 w-100">
+<div className="container-fluid float-start  mx-auto w-100">
       <div className="owl-carousel owl-theme  " id="owl-two">
 
         

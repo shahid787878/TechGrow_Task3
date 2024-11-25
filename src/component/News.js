@@ -1,16 +1,20 @@
 import React from 'react'
+
+import PhotoGallary from './PhotoGallary'
+import FetchDataLoading from './FetchDataLoading'
 const News = () => {
   return (
 
 <div>
 
       <>
-      <header className="one bg-dark ">
-         <div className="container-fluid ">
-        <nav className="navbar navbar-expand-sm ">
+      
+      <header className="one-fluid  w-100">
+         <div className="container-fluid  ">
+        <nav className="navbar navbar-expand-sm bg-dark ">
           <div className="container justify-content-around p-0 ">
-            <div className="">
-              <a className="navbar-brand text-light text-wrap  d-md-block bg-danger" href="https://shahid787878.github.io/SHAHID/">
+            <div className="btnshop">
+              <a className="navbar-brand text-primary text-wrap  d-md-block " href="https://shahid787878.github.io/SHAHID/">
               {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu0xi6xwH5_s4yKKI5HH99ImEXTGz93VijBVFlHEQTKPBMBJtPFPzS09w&simg/logo_light.png"/> */}
                SHAHID PATEL 9752784376</a>
             </div>
@@ -107,6 +111,9 @@ const News = () => {
 
 
 </>
+{/* <Contact/> */}
+<FetchDataLoading/>
+<PhotoGallary/>
     </div>
   )
 }

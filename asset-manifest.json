@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/TechGrow_Task3/static/css/main.fb25e43d.css",
-    "main.js": "/TechGrow_Task3/static/js/main.d55ad215.js",
+    "main.css": "/TechGrow_Task3/static/css/main.a0a74082.css",
+    "main.js": "/TechGrow_Task3/static/js/main.0a8b332c.js",
     "static/js/453.ed3810f9.chunk.js": "/TechGrow_Task3/static/js/453.ed3810f9.chunk.js",
     "index.html": "/TechGrow_Task3/index.html",
-    "main.fb25e43d.css.map": "/TechGrow_Task3/static/css/main.fb25e43d.css.map",
-    "main.d55ad215.js.map": "/TechGrow_Task3/static/js/main.d55ad215.js.map",
+    "main.a0a74082.css.map": "/TechGrow_Task3/static/css/main.a0a74082.css.map",
+    "main.0a8b332c.js.map": "/TechGrow_Task3/static/js/main.0a8b332c.js.map",
     "453.ed3810f9.chunk.js.map": "/TechGrow_Task3/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb25e43d.css",
-    "static/js/main.d55ad215.js"
+    "static/css/main.a0a74082.css",
+    "static/js/main.0a8b332c.js"
   ]
 }
